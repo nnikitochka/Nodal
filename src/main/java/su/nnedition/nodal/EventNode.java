@@ -22,7 +22,7 @@ import java.util.function.Predicate;
  *
  * @param <T> The event type accepted by this node
  */
-public sealed interface EventNode<T extends Event> permits EventNodeImpl {
+public interface EventNode<T extends Event> {
 
     /**
      * Creates an event node which accepts any event type with no filtering.
