@@ -1,4 +1,4 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.VarHandle;

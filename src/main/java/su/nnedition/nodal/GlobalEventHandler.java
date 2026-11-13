@@ -1,4 +1,4 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
 /**
  * Object containing all the global event listeners.

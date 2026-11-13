@@ -1,8 +1,8 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
-import net.minestom.server.event.trait.CancellableEvent;
-import net.minestom.server.event.trait.RecursiveEvent;
 import org.jetbrains.annotations.Contract;
+import su.nnedition.nodal.trait.CancellableEvent;
+import su.nnedition.nodal.trait.RecursiveEvent;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,13 +1,5 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
-import net.minestom.server.entity.Entity;
-import net.minestom.server.entity.Player;
-import net.minestom.server.event.trait.*;
-import net.minestom.server.instance.Instance;
-import net.minestom.server.instance.block.Block;
-import net.minestom.server.inventory.AbstractInventory;
-import net.minestom.server.item.ItemStack;
-import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Function;
@@ -66,7 +58,6 @@ public interface EventFilter<E extends Event, H> {
      */
     @Nullable H getHandler(E event);
 
-    @ApiStatus.Internal
     @SuppressWarnings("unchecked")
     default @Nullable H castHandler(Object event) {
         return getHandler((E) event);

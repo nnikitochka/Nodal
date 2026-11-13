@@ -1,6 +1,6 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
-import net.minestom.server.event.trait.CancellableEvent;
+import trait.CancellableEvent;
 import net.minestom.server.tag.Tag;
 import net.minestom.server.tag.TagReadable;
 import org.jetbrains.annotations.ApiStatus;
@@ -212,7 +212,7 @@ public sealed interface EventNode<T extends Event> permits EventNodeImpl {
      */
     default void callCancellable(T event, Runnable successCallback) {
         call(event);
-        if (!(event instanceof CancellableEvent cancellableEvent) || !cancellableEvent.isCancelled()) {
+        if (!(event instanceof CancellableEvent cancellableEvent) || !cancellableEvent.isCancelled) {
             successCallback.run();
         }
     }

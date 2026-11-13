@@ -1,6 +1,4 @@
-package net.minestom.event;
-
-import org.jetbrains.annotations.ApiStatus;
+package su.nnedition.nodal;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,7 +8,6 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-@ApiStatus.Experimental
 public interface EventBinding<E extends Event> {
 
     static <E extends Event, T> FilteredBuilder<E, T> filtered(EventFilter<E, T> filter, Predicate<T> predicate) {

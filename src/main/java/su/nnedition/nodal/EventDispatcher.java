@@ -1,7 +1,7 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
 import net.minestom.server.MinecraftServer;
-import net.minestom.server.event.trait.CancellableEvent;
+import trait.CancellableEvent;
 
 public final class EventDispatcher {
 

@@ -1,12 +1,12 @@
-package net.minestom.event;
+package su.nnedition.nodal;
 
 import net.minestom.server.MinecraftServer;
-import net.minestom.server.event.trait.AsyncEvent;
-import net.minestom.server.event.trait.RecursiveEvent;
 import net.minestom.server.property.ServerProperties;
 import net.minestom.server.utils.validate.Check;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
+import su.nnedition.nodal.trait.AsyncEvent;
+import su.nnedition.nodal.trait.RecursiveEvent;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
