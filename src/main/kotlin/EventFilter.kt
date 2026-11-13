@@ -45,8 +45,10 @@ interface EventFilter<E : Event, H> {
     fun handlerType(): Class<H>?
 
     companion object {
+        @JvmStatic
         val ALL: EventFilter<Event, *> = from<Event, Any>(Event::class.java, null, null)
 
+        @JvmStatic
         fun <E : Event, H> from(
             eventType: Class<E>,
             handlerType: Class<H>?,

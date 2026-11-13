@@ -48,6 +48,7 @@ interface EventBinding<E : Event> {
     }
 
     companion object {
+        @JvmStatic
         fun <E : Event, T> filtered(
             filter: EventFilter<E, T>,
             predicate: Predicate<T>
