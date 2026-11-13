@@ -1,6 +1,5 @@
 package su.nnedition.nodal;
 
-import net.minestom.server.MinecraftServer;
 import net.minestom.server.property.ServerProperties;
 import net.minestom.server.utils.validate.Check;
 import org.jetbrains.annotations.Contract;
@@ -359,7 +358,7 @@ public class EventNodeImpl<T extends Event> implements EventNode<T> {
             try {
                 listener.accept(event);
             } catch (Throwable e) {
-                MinecraftServer.getExceptionManager().handleException(e);
+                e.printStackTrace(System.err);
             }
         }
 

@@ -31,7 +31,7 @@ internal class EventNodeLazyImpl<E : Event>(
         return super.addListener<E1>(eventType, listener)
     }
 
-    override fun <E1 : E, H> map(value: H?, filter: EventFilter<E1, H>): EventNode<E1> {
+    override fun <E1 : E, H> map(value: H, filter: EventFilter<E1, H>): EventNode<E1> {
         val owner = retrieveOwner()
         require(owner === value) { "Cannot map an object to an already mapped node." }
         @Suppress("UNCHECKED_CAST")
