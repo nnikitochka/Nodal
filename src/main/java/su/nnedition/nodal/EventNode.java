@@ -341,7 +341,6 @@ public interface EventNode<T extends Event> {
      * @param filter the filter to use
      * @return the node (which may have already been registered) directly linked to {@code value}
      */
-    @ApiStatus.Experimental
     <E extends T, H> EventNode<E> map(H value, EventFilter<E, H> filter);
 
     /**
@@ -349,12 +348,9 @@ public interface EventNode<T extends Event> {
      *
      * @param value the value to unmap
      */
-    @ApiStatus.Experimental
     void unmap(Object value);
 
-    @ApiStatus.Experimental
     void register(EventBinding<? extends T> binding);
 
-    @ApiStatus.Experimental
     void unregister(EventBinding<? extends T> binding);
 }
