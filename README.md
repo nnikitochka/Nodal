@@ -25,7 +25,7 @@
 ### Gradle (Kotlin DSL)
 ```kotlin
 repositories {
-    mavenCentral()
+    maven("https://jitpack.io")
 }
 
 dependencies {
