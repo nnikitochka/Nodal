@@ -178,7 +178,7 @@ interface EventNode<T : Event> {
      * @param filter the filter to use
      * @return the node (which may have already been registered) directly linked to `value`
      */
-    fun <E : T, H> map(value: H, filter: EventFilter<E, H>): EventNode<E>
+    fun <E : T, H : Any> map(value: H, filter: EventFilter<E, H>): EventNode<E>
 
     /**
      * Prevents the node from [map] to be called.

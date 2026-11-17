@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference
 import java.util.*
 import java.util.function.Consumer
 
-internal class EventNodeLazyImpl<E : Event>(
+class EventNodeLazyImpl<E : Event> internal constructor(
     private val holder: EventNodeImpl<in E>,
     owner: Any,
     filter: EventFilter<E, *>,
@@ -28,10 +28,10 @@ internal class EventNodeLazyImpl<E : Event>(
 
     override fun <E1 : E> addListener(eventType: Class<E1>, listener: Consumer<E1>): EventNode<E> {
         ensureMap()
-        return super.addListener<E1>(eventType, listener)
+        return super.addListener(eventType, listener)
     }
 
-    override fun <E1 : E, H> map(value: H, filter: EventFilter<E1, H>): EventNode<E1> {
+    override fun <E1 : E, H : Any> map(value: H, filter: EventFilter<E1, H>): EventNode<E1> {
         val owner = retrieveOwner()
         require(owner === value) { "Cannot map an object to an already mapped node." }
         @Suppress("UNCHECKED_CAST")
